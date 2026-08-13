@@ -3,7 +3,7 @@ import { Listbox, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { LOCAL_STORAGE } from "../utils/constants";
 
-const examples = ["P2ID.masm", "P2IDR.masm", "SWAP.masm"];
+const examples = ["P2ID.masm", "P2IDE.masm", "SWAP.masm"];
 
 function classExamples(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
