@@ -3,6 +3,7 @@ name: Deploy Miden Assembly Playground
 on:
   push:
     branches:
+      - master
       - main
 
 jobs:
@@ -20,7 +21,6 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          cd playground
           npm run build:miden
           npm install
           npm run build
@@ -29,4 +29,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./playground/build/
+          publish_dir: ./build/
